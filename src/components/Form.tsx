@@ -2,6 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { API, DASHBOARD_URL } from "../api";
+import { ImVolumeIncrease } from "react-icons/im";
+import { LiaClock } from "react-icons/lia";
+import { BiBuilding } from "react-icons/bi";
 const Form = () => {
     const [phone, setPhone] = useState("");
     const [otp, setOtp] = useState("");
@@ -140,7 +143,7 @@ const Form = () => {
                     },
                     body: JSON.stringify(userToSend),
                 }).then(() => {
-                    window.location.href = `${DASHBOARD_URL}/redirect?To=${'design-ai'}&Id=${data.Id}&Token=${data.Token}&Session=${data.Session}&Name=${data.Name}&Email=${data.Email}&Currency=${data.Currency}&Phone=${data.Phone}&PCode=${data.PCode}&RecId=${data.RecId}`;
+                    window.location.href = `${DASHBOARD_URL}/redirect?To=${'finance-your-project'}&Id=${data.Id}&Token=${data.Token}&Session=${data.Session}&Name=${data.Name}&Email=${data.Email}&Currency=${data.Currency}&Phone=${data.Phone}&PCode=${data.PCode}&RecId=${data.RecId}`;
                     toast.success("Registered successfully!");
                 }).catch((error) => error.response.json());
             }
@@ -158,190 +161,164 @@ const Form = () => {
     return (
         <>
             <Toaster />
-            <div className="max-w-lg mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg relative">
-                <h1 className="text-center text-4xl font-bold text-green-600 mb-8">
-                    Design Now
-                </h1>
-                {!isOtpSent ? (
-                    <div>
-                        <input
-                            type="text"
-                            placeholder="Phone Number"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            className="input input-bordered w-full mb-4 p-4 text-lg rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        {error && <p className="text-red-500 mb-2">{error}</p>}
-                        <button
-                            onClick={handleSendOtp}
-                            disabled={loading}
-                            className={`btn w-full py-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition duration-300 ${loading ? "cursor-not-allowed opacity-70" : ""
-                                }`}
-                        >
-                            {loading ? (
-                                <span className="flex items-center justify-center">
-                                    <svg
-                                        className="animate-spin h-5 w-5 mr-2 text-white"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <circle
-                                            className="opacity-25"
-                                            cx="12"
-                                            cy="12"
-                                            r="10"
-                                            stroke="currentColor"
-                                            strokeWidth="4"
-                                        ></circle>
-                                        <path
-                                            className="opacity-75"
-                                            fill="currentColor"
-                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                                        ></path>
-                                    </svg>
-                                    Sending...
-                                </span>
-                            ) : (
-                                "Send OTP"
-                            )}
-                        </button>
-                    </div>
-                ) : isNewUser ? (
-                    <div>
-                        <h2 className="text-xl font-semibold mb-4 text-gray-800">
-                            Register
-                        </h2>
-                        <input
-                            type="text"
-                            placeholder="First Name"
-                            value={user.fname}
-                            onChange={(e) => handleInputChange("fname", e.target.value)}
-                            className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Last Name"
-                            value={user.lname}
-                            onChange={(e) => handleInputChange("lname", e.target.value)}
-                            className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={user.email}
-                            onChange={(e) => handleInputChange("email", e.target.value)}
-                            className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <input
-                            type="text"
-                            placeholder="City"
-                            value={user.city}
-                            onChange={(e) => handleInputChange("city", e.target.value)}
-                            className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Pincode"
-                            value={user.pincode}
-                            onChange={(e) => handleInputChange("pincode", e.target.value)}
-                            className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <div className="flex items-center mb-6">
-                            <input
-                                type="checkbox"
-                                checked={termsAccepted}
-                                onChange={() => setTermsAccepted(!termsAccepted)}
-                                className="mr-2"
-                            />
+            <div className="relative min-h-screen flex items-center justify-center backdrop-blur-lg bg-green-50/70">
+                <div className=" w-full  p-10 rounded-t-3xl  border bg-[#FFFFFF] shadow-xl">
+                    <h1 className="text-2xl font-bold text-green-600 text-left mb-6">
+                     Exciting Home Loan Offers from 90+ Banks in India
+                    </h1>
+                    <ul className=" text-gray-600 mb-6">
+                        <span className="flex gap-2 items-center">
+                            <ImVolumeIncrease />
+                            Best Interest Rates
+
+                        </span>
+                        <span className="flex gap-2 items-center">
+                            <LiaClock />
+                            Fast Approval Process
+
+                        </span>
+                        <span className="flex gap-2 items-center">
+                            <BiBuilding />
+                            Tailored for Constraction
+                        </span>
+                    </ul>
+                    {!isOtpSent ? (
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                Mobile Number
+                            </label>
+                            <div className="flex input input-bordered w-full  text-lg rounded-lg mb-4">
+                                <div className=" inset-y-0 left-0  flex items-center pl-3 text-gray-500">
+                                    🇮🇳 +91
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder=" XXXXXXXXX"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    className="border-0 focus:border-0 focus:outline-none focus:ring-0"
+                                />
+                            </div>
+                            <p className="text-xs text-gray-500 mb-4">
+                                By clicking on proceed, you agree to the{" "}
+                                <a href="/terms" className="text-green-600 underline">
+                                    Terms of Use
+                                </a>{" "}
+                                and{" "}
+                                <a href="/privacy" className="text-green-600 underline">
+                                    Privacy Policy
+                                </a>.
+                            </p>
+                            {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+                            <button
+                                onClick={handleSendOtp}
+                                disabled={loading}
+                                className={`btn btn-success w-full ${loading ? "btn-disabled" : ""
+                                    }`}
+                            >
+                                {loading ? (
+                                    <span className="loading loading-spinner"></span>
+                                ) : (
+                                    "Send OTP"
+                                )}
+                            </button>
                         </div>
-                        <label htmlFor="terms" className="text-slate-600">
-                            I accept the <a href="/terms" className="text-blue-500">Terms and Conditions</a>
-                        </label>
-                        {error && <p className="text-red-500 mb-2">{error}</p>}
-                        <button
-                            onClick={registerNewCustomer}
-                            disabled={loading}
-                            className={`btn w-full py-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition duration-300 ${loading ? "cursor-not-allowed opacity-70" : ""
-                                }`}
-                        >
-                            {loading ? (
-                                <span className="flex items-center justify-center">
-                                    <svg
-                                        className="animate-spin h-5 w-5 mr-2 text-white"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <circle
-                                            className="opacity-25"
-                                            cx="12"
-                                            cy="12"
-                                            r="10"
-                                            stroke="currentColor"
-                                            strokeWidth="4"
-                                        ></circle>
-                                        <path
-                                            className="opacity-75"
-                                            fill="currentColor"
-                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                                        ></path>
-                                    </svg>
-                                    Registering...
-                                </span>
-                            ) : (
-                                "Register"
-                            )}
-                        </button>
-                    </div>
-                ) : (
-                    <div>
-                        <input
-                            type="text"
-                            placeholder="Enter OTP"
-                            value={otp}
-                            onChange={(e) => setOtp(e.target.value)}
-                            className="input input-bordered w-full mb-4 p-4 text-lg rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        {error && <p className="text-red-500 mb-2">{error}</p>}
-                        <button
-                            disabled={loading}
-                            onClick={handleVerifyOtp}
-                            className={`btn w-full py-3 rounded-lg bg-green-500 text-white hover:bg-green-600 transition duration-300 ${loading ? "cursor-not-allowed opacity-70" : ""
-                                }`}
-                        >
-                            {loading ? (
-                                <span className="flex items-center justify-center">
-                                    <svg
-                                        className="animate-spin h-5 w-5 mr-2 text-white"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <circle
-                                            className="opacity-25"
-                                            cx="12"
-                                            cy="12"
-                                            r="10"
-                                            stroke="currentColor"
-                                            strokeWidth="4"
-                                        ></circle>
-                                        <path
-                                            className="opacity-75"
-                                            fill="currentColor"
-                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                                        ></path>
-                                    </svg>
-                                    Verifying...
-                                </span>
-                            ) : (
-                                "Verify OTP"
-                            )}
-                        </button>
-                    </div>
-                )}
+                    ) : isNewUser ? (
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="First Name"
+                                value={user.fname}
+                                onChange={(e) => handleInputChange("fname", e.target.value)}
+                                className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Last Name"
+                                value={user.lname}
+                                onChange={(e) => handleInputChange("lname", e.target.value)}
+                                className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={user.email}
+                                onChange={(e) => handleInputChange("email", e.target.value)}
+                                className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <input
+                                type="text"
+                                placeholder="City"
+                                value={user.city}
+                                onChange={(e) => handleInputChange("city", e.target.value)}
+                                className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Pincode"
+                                value={user.pincode}
+                                onChange={(e) => handleInputChange("pincode", e.target.value)}
+                                className="input input-bordered w-full mb-6 p-4 rounded-lg border-2 border-slate-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <div className="flex items-center mb-4">
+                                <input
+                                    type="checkbox"
+                                    checked={termsAccepted}
+                                    onChange={() => setTermsAccepted(!termsAccepted)}
+                                    className="checkbox checkbox-success"
+                                />
+                                <label className="ml-2 text-gray-700">
+                                    I accept the{" "}
+                                    <a href="/terms" className="text-green-600">
+                                        Terms and Conditions
+                                    </a>
+                                </label>
+                            </div>
+                            {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+                            <button
+                                onClick={registerNewCustomer}
+                                disabled={loading}
+                                className={`btn btn-success w-full ${loading ? "btn-disabled" : ""
+                                    }`}
+                            >
+                                {loading ? (
+                                    <span className="loading loading-spinner"></span>
+                                ) : (
+                                    "Register"
+                                )}
+                            </button>
+                        </div>
+                    ) : (
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                Enter OTP
+                            </label>
+                            <input
+                                type="text"
+                                placeholder="OTP"
+                                value={otp}
+                                onChange={(e) => setOtp(e.target.value)}
+                                className="input input-bordered w-full mb-4 p-4 rounded-lg focus:ring-2 focus:ring-green-500"
+                            />
+                            {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+                            <button
+                                onClick={handleVerifyOtp}
+                                disabled={loading}
+                                className={`btn btn-success w-full ${loading ? "btn-disabled" : ""
+                                    }`}
+                            >
+                                {loading ? (
+                                    <span className="loading loading-spinner"></span>
+                                ) : (
+                                    "Verify OTP"
+                                )}
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
         </>
+
     );
 };
 
