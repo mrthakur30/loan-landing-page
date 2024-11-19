@@ -20,12 +20,12 @@ const Main = () => {
         </div>
       )}
 
-      <div className="hidden  w-[650px] rounded-lg md:block absolute right-36 top-24" >
+      <div className=" w-full px-2 md:w-[650px] rounded-lg  md:absolute pt-20" >
         <ImageSlider />
       </div>
 
 
-      <div className="md:ml-8 md:pt-28 pt-20 flex justify-center md:justify-start items-center">
+      <div className="md:ml-8 md:pt-28 flex justify-center md:justify-start items-center">
         <p className=" font-semibold md:text-2xl rounded-3xl bg-gradient-to-r my-7 from-green-1 px-2 py-1 to-transparent text-center">Exciting Home Loan Offers from 90+ Banks in India</p>
       </div>
 
