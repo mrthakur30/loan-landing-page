@@ -13,7 +13,7 @@ const Main = () => {
 
   return (
     <main className="w-full min-h-screen bg-green-4 ">
-      <Header onClick={() => setShowForm(true)} />
+      <Header setOpen={() => setShowForm(true)} />
       {showForm && (
         <div className=" z-[40] w-full fixed h-full">
           <Form />

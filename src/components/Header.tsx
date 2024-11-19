@@ -1,7 +1,6 @@
-import React from "react";
 import Logo from "../assets/navlogo.svg"
 import { BiLogIn } from "react-icons/bi";
-const Header: React.FC = ({onClick} : any) => {
+const Header = ({setOpen} : any) => {
 
 
     return (
@@ -13,7 +12,7 @@ const Header: React.FC = ({onClick} : any) => {
                 <h1 className=" text-zinc-800  text-center">Home Loan</h1>
             </div>
 
-            <button type="button" onClick={onClick} className="text-white border-2 md:text-xl ml-5 font-semibold border-green-1 hover:bg-green-2 transition-all grid justify-items-center bg-green-1 p-2.5 px-4 rounded-full ">
+            <button type="button" onClick={setOpen} className="text-white border-2 md:text-xl ml-5 font-semibold border-green-1 hover:bg-green-2 transition-all grid justify-items-center bg-green-1 p-2.5 px-4 rounded-full ">
                 <BiLogIn />
             </button>
         </div>
