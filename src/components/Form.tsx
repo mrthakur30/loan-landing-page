@@ -164,7 +164,7 @@ const Form = () => {
             <div className="relative min-h-screen flex items-center justify-center backdrop-blur-lg bg-green-50/70">
                 <div className=" w-full  p-10 rounded-t-3xl  border bg-[#FFFFFF] shadow-xl">
                     <h1 className="text-2xl font-bold text-green-600 text-left mb-6">
-                     Exciting Home Loan Offers from 90+ Banks in India
+                        Exciting Home Loan Offers from 90+ Banks in India
                     </h1>
                     <ul className=" text-gray-600 mb-6">
                         <span className="flex gap-2 items-center">
@@ -188,9 +188,12 @@ const Form = () => {
                                 Mobile Number
                             </label>
                             <div className="flex input input-bordered w-full  text-lg rounded-lg mb-4">
-                                <div className=" inset-y-0 left-0  flex items-center pl-3 text-gray-500">
-                                    🇮🇳 +91
+                                <div className="text-base flex items-center p-2 text-gray-500">
+                                    🇮🇳
                                 </div>
+                                <p className="text-base flex items-center  mr-3 text-gray-500">
+
+                                    +91</p>
                                 <input
                                     type="text"
                                     placeholder=" XXXXXXXXX"
