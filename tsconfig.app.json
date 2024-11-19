@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "public/Slider.tsx"]
+  "include": ["src", "src/components/Slider.tsx"]
 }

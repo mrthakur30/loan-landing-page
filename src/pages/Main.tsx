@@ -6,7 +6,7 @@ import { MdRoomPreferences } from "react-icons/md";
 import { GrHomeOption } from "react-icons/gr";
 import Footer from "../components/Footer";
 import { useState } from "react";
-import ImageSlider from "../../public/Slider";
+import ImageSlider from "../components/Slider";
 
 const Main = () => {
   const [showForm, setShowForm] = useState(false);
