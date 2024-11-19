@@ -1,15 +1,13 @@
 
 import Form from "../components/Form"
 import Header from "../components/Header"
-import { BiBuilding, BiHome } from "react-icons/bi";
+import { BiHome } from "react-icons/bi";
 import { MdRoomPreferences } from "react-icons/md";
 import { GrHomeOption } from "react-icons/gr";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import ImageSlider from "../components/Slider";
-import { ImVolumeIncrease } from "react-icons/im";
-import { LiaClock } from "react-icons/lia";
-import { TiTick, TiTickOutline } from "react-icons/ti";
+import { TiTickOutline } from "react-icons/ti";
 
 const Main = () => {
   const [showForm, setShowForm] = useState(false);
