@@ -7,7 +7,8 @@ import { GrHomeOption } from "react-icons/gr";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import ImageSlider from "../components/Slider";
-import { TiTickOutline } from "react-icons/ti";
+import { TiTick, TiTickOutline } from "react-icons/ti";
+import FAQSection from "../components/FAQ";
 
 const Main = () => {
   const [showForm, setShowForm] = useState(false);
@@ -21,71 +22,76 @@ const Main = () => {
         </div>
       )}
 
-      <div className=" w-full px-2 md:w-[650px] rounded-lg  md:absolute md:pt-0 pt-20 right-36 top-24" >
-        <ImageSlider />
-      </div>
 
 
-      <div className="md:ml-8 md:pt-24 pt-10 flex justify-center md:justify-start items-center">
-        <p className=" font-semibold md:text-2xl rounded-3xl bg-gradient-to-r my-7 from-green-1 px-2 py-1 to-transparent text-center">Exciting Home Loan Offers from 90+ Banks in India</p>
-      </div>
-
-
-      <div className="md:ml-8 mx-4 flex md:flex-row flex-col justify-center md:justify-start items-start  md:gap-7 ">
-        <span className="text-2xl font-bold ">
-          <span className="text-green-2"> Design Elementary </span>
-          offers  a wide <br /> range of  loans to  meet <br /> your diverse needs.
-        </span>
-        <button onClick={() => setShowForm(true)}
-          className="flex text-xl w-36 mt-5 md:mt-0 shadow-md shadow-green-2 rounded-2xl justify-center items-center  bg-green-3 text-green-0 md:px-4 px-3 py-2 font-semibold">
-          <span>
-            Get Loan
+      <div className="md:h-[80%] main flex flex-col md:flex-row justify-center px-4 md:justify-between main md:pr-16 md:pl-36 ">
+        <div className=" md:px-0 flex flex-col pt-16  md:pt-36  gap-8 ">
+          <div className="main ">
+            <ImageSlider />
+          </div>
+          <div className=" flex  md:justify-start md:items-center">
+            <p className=" font-semibold md:text-2xl text-xl text-green-700 rounded-3xl bg-gradient-to-r from-green-2 px-5 py-2 to-transparent">Exciting Home Loan Offers from 90+ Banks in India</p>
+          </div>
+          <span className=" text-4xl md:text-4xl font-bold ">
+            <span className="text-green-2"> Design Elementary </span>
+            offers  a wide <br /> range of  loans to  meet <br /> your diverse needs.
           </span>
-        </button>
+          <button
+            onClick={() => setShowForm(true)}
+            className="flex text-2xl  md:w-44 hover:shadow transition-all  shadow-green-2 rounded-3xl justify-center items-center  bg-green-2 text-white first-line:md:px-4 px-4 py-2 font-semibold">
+            <span>
+              Get Loan
+            </span>
+          </button>
+        </div>
+        <div className="md:w-1/3">
+          <Form />
+        </div>
+        <div>
+        </div>
       </div>
 
-      <div className="">
-
-      </div>
 
 
-      <div className="py-10 w-full p-4 md:px-8 flex flex-col gap-3 justify-start">
-        <h1 className="text-3xl font-bold text-left">Home Loans simplified</h1>
+
+
+      <div className="py-10 w-full p-4 md:pl-36  flex flex-col gap-3 justify-start">
+        <h1 className="text-3xl font-bold text-left">Home Loans Simplified</h1>
         <ul className=" text-gray-600 mb-6 text-lg">
-                        <span className="flex gap-2 items-center">
-                        <TiTickOutline size={20} />
-                            Best Interest Rates
+          <span className="flex font-light text-lg gap-2 items-center">
+            <TiTick size={25} />
+            Best Interest Rates
 
-                        </span>
-                        <span className="flex gap-2 items-center">
-                            <TiTickOutline size={20} />
-                            Fast Approval Process
+          </span>
+          <span className="flex font-light text-lg gap-2 items-center">
+          <TiTick size={25} />
+            Fast Approval Process
 
-                        </span>
-                        <span className="flex gap-2 items-center">
-                        <TiTickOutline  size={20}/>
-                            Tailored for Constraction
-                        </span>
-                    </ul>
+          </span>
+          <span className="flex font-light text-lg gap-2 items-center">
+          <TiTick size={25} />
+            Tailored for Constraction
+          </span>
+        </ul>
         <button onClick={() => setShowForm(true)}
-          className="flex rounded-2xl text-lg justify-center w-36 items-center text-green-3 bg-green-1 px-2 py-2 font-semibold">
+          className="flex rounded-3xl text-lg justify-center w-44 items-center text-white bg-green-3 px-3 py-2 font-semibold">
           Get Loan Now !
         </button>
 
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="w-full bg-zinc-300 border border-green-0  hover:shadow-green-1 transition-all shadow-md bg-opacity-30 p-6 b rounded-2xl">
+        <div className="flex mt-8 flex-col md:flex-row gap-4">
+          <div className="w-full bg-white border border-green-1  hover:shadow-green-2 transition-all shadow-md bg-opacity-30 p-6 b rounded-2xl">
             <BiHome color="#B1E182" size={45} />
             <h1 className="text-xl font-semibold mt-5">Interior Loan</h1>
             <p className="font-semibold mt-2 text-gray-400">Variety of settings to generate perfect interior for your needs.</p>
           </div>
-          <div className="w-full bg-zinc-300 border border-green-0  hover:shadow-green-1 transition-all shadow-md bg-opacity-30  p-6  rounded-2xl">
+          <div className="w-full bg-white border border-green-1  hover:shadow-green-2 transition-all shadow-md bg-opacity-30  p-6  rounded-2xl">
             <MdRoomPreferences color="#B1E182" size={45} />
             <h1 className="text-xl font-semibold mt-5">Home Loan</h1>
             <p className="font-semibold mt-2 text-gray-400">
               Upload an image of your room and our AI will restyle it with your chosen design preferences.
             </p>
           </div>
-          <div className="w-full bg-zinc-300 border border-green-0  hover:shadow-green-1 transition-all shadow-md bg-opacity-30 p-6  rounded-2xl">
+          <div className="w-full bg-white border border-green-1  hover:shadow-green-2 transition-all shadow-md bg-opacity-30 p-6  rounded-2xl">
             <GrHomeOption color="#B1E182" size={45} />
             <h1 className="text-xl font-semibold mt-5">Loan Against Property</h1>
             <p className="font-semibold mt-2 text-gray-400">
@@ -99,6 +105,8 @@ const Main = () => {
       <div>
 
       </div>
+      
+      <FAQSection />
 
       <Footer />
 

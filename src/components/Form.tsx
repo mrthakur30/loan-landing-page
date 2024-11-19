@@ -5,6 +5,7 @@ import { API, DASHBOARD_URL } from "../api";
 import { ImVolumeIncrease } from "react-icons/im";
 import { LiaClock } from "react-icons/lia";
 import { BiBuilding } from "react-icons/bi";
+import { TiTick } from "react-icons/ti";
 const Form = () => {
     const [phone, setPhone] = useState("");
     const [otp, setOtp] = useState("");
@@ -162,24 +163,24 @@ const Form = () => {
         <>
             <Toaster />
             <div className="relative min-h-screen flex items-center justify-center backdrop-blur-lg bg-green-50/70">
-                <div className=" w-full  p-10 rounded-t-3xl  border bg-[#FFFFFF] shadow-xl">
-                    <h1 className="text-2xl font-bold text-green-600 text-left mb-6">
+                <div className=" w-full md:w-auto p-10 rounded-3xl  border bg-[#FFFFFF] shadow-xl">
+                    <h1 className="text-2xl font-semibold text-green-600 text-left mb-6">
                         Exciting Home Loan Offers from 90+ Banks in India
                     </h1>
-                    <ul className=" text-gray-600 mb-6">
+                    <ul className=" text-gray-600 text-lg font-light mb-6">
                         <span className="flex gap-2 items-center">
-                            <ImVolumeIncrease />
+                        <TiTick />
                             Best Interest Rates
 
                         </span>
                         <span className="flex gap-2 items-center">
-                            <LiaClock />
+                        <TiTick />
                             Fast Approval Process
 
                         </span>
                         <span className="flex gap-2 items-center">
-                            <BiBuilding />
-                            Tailored for Constraction
+                            <TiTick />
+                            Tailored for Construction
                         </span>
                     </ul>
                     {!isOtpSent ? (
@@ -216,11 +217,11 @@ const Form = () => {
                             <button
                                 onClick={handleSendOtp}
                                 disabled={loading}
-                                className={`btn btn-success w-full ${loading ? "btn-disabled" : ""
+                                className={`btn bg-green-2 btn-success w-full ${loading ? "btn-disabled" : ""
                                     }`}
                             >
                                 {loading ? (
-                                    <span className="loading loading-spinner"></span>
+                                    <span className="loading  loading-spinner"></span>
                                 ) : (
                                     "Send OTP"
                                 )}
