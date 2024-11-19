@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/navlogo.svg"
-import { BiPhoneCall } from "react-icons/bi";
-const Header: React.FC = () => {
+import { BiLogIn } from "react-icons/bi";
+const Header: React.FC = ({onClick} : any) => {
 
 
     return (
@@ -13,10 +13,8 @@ const Header: React.FC = () => {
                 <h1 className=" text-zinc-800  text-center">Home Loan</h1>
             </div>
 
-            <button type="button" className="text-white border-2 md:text-xl ml-5 font-semibold border-green-1 hover:bg-green-2 transition-all grid justify-items-center bg-green-1 p-2.5 px-4 rounded-full ">
-                <a href="https://api.whatsapp.com/send?phone=+916363759171&text=Hello,%20I%20would%20like%20to%20know%20more%20about%20Your%20Designs">
-                    <BiPhoneCall />
-                </a>
+            <button type="button" onClick={onClick} className="text-white border-2 md:text-xl ml-5 font-semibold border-green-1 hover:bg-green-2 transition-all grid justify-items-center bg-green-1 p-2.5 px-4 rounded-full ">
+                <BiLogIn />
             </button>
         </div>
     </div >

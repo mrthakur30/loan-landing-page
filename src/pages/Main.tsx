@@ -1,7 +1,6 @@
 
 import Form from "../components/Form"
 import Header from "../components/Header"
-import { CgArrowRight } from "react-icons/cg";
 import { BiHome } from "react-icons/bi";
 import { MdRoomPreferences } from "react-icons/md";
 import { GrHomeOption } from "react-icons/gr";
@@ -14,7 +13,7 @@ const Main = () => {
 
   return (
     <main className="w-full min-h-screen bg-green-4 ">
-      <Header />
+      <Header onClick={()=>setShowForm(true)} />
       {showForm && (
         <div className=" z-[40] w-full fixed h-full">
           <Form />
