@@ -4,27 +4,31 @@ import Header from "../components/Header"
 import { BiHome } from "react-icons/bi";
 import { MdRoomPreferences } from "react-icons/md";
 import { GrHomeOption } from "react-icons/gr";
-import image from "../assets/homeloan.jpg"
 import Footer from "../components/Footer";
 import { useState } from "react";
+import ImageSlider from "../../public/Slider";
 
 const Main = () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
     <main className="w-full min-h-screen bg-green-4 ">
-      <Header onClick={()=>setShowForm(true)} />
+      <Header onClick={() => setShowForm(true)} />
       {showForm && (
         <div className=" z-[40] w-full fixed h-full">
           <Form />
         </div>
       )}
 
+      <div className="hidden  w-[650px] rounded-lg md:block absolute right-36 top-24" >
+        <ImageSlider />
+      </div>
+
+
       <div className="md:ml-8 md:pt-28 pt-20 flex justify-center md:justify-start items-center">
         <p className=" font-semibold md:text-2xl rounded-3xl bg-gradient-to-r my-7 from-green-1 px-2 py-1 to-transparent text-center">Exciting Home Loan Offers from 90+ Banks in India</p>
       </div>
 
-      <img src={image}   className="hidden h-56 rounded-lg md:block absolute right-36 top-36" alt="" />
 
       <div className="md:ml-8 mx-4 flex md:flex-row flex-col justify-center md:justify-start items-start  md:gap-7 ">
         <span className="text-2xl font-bold ">
@@ -45,8 +49,8 @@ const Main = () => {
 
 
       <div className="py-10 w-full p-4 md:px-8 flex flex-col gap-3 justify-start">
-        <h1 className="text-3xl font-bold text-left">Design AI <br /> Features</h1>
-        <p className="text-gray-400 font-semibold">Enhance your image's resolution and achieve crisp, <br /> clear quality with a single click.</p>
+        <h1 className="text-3xl font-bold text-left">Our Offerings</h1>
+        <p className="text-gray-400 font-semibold">Home Loans simplified</p>
         <button onClick={() => setShowForm(true)}
           className="flex rounded-2xl text-lg justify-center w-36 items-center text-green-3 bg-green-1 px-2 py-2 font-semibold">
           Get Loan Now !
