@@ -35,7 +35,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="p-6 bg-green-50">
+    <div className="p-6 bg-green-50 bg-[#f3fafa] mx-4 md:mx-36 rounded-se-3xl my-10">
       <h2 className="text-3xl font-bold text-green-700 text-center mb-6">
         Frequently Asked Questions
       </h2>

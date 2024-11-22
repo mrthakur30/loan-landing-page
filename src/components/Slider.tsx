@@ -25,11 +25,6 @@ const ImageSlider = () => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  const handlePrev = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
 
   // Auto-slide every 2 seconds
   useEffect(() => {

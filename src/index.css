@@ -2,10 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.main {
-    background-color: #e6f7f7;
-opacity: 0.8;
-background-image:  radial-gradient(#2e7cce 0.65px, transparent 0.65px), radial-gradient(#003bc5 0.65px, #e6f7f7 0.65px);
-background-size: 26px 26px;
-background-position: 0 0,13px 13px;
-}

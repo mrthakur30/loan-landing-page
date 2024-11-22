@@ -2,9 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { API, DASHBOARD_URL } from "../api";
-import { ImVolumeIncrease } from "react-icons/im";
-import { LiaClock } from "react-icons/lia";
-import { BiBuilding } from "react-icons/bi";
 import { TiTick } from "react-icons/ti";
 const Form = () => {
     const [phone, setPhone] = useState("");
@@ -162,7 +159,7 @@ const Form = () => {
     return (
         <>
             <Toaster />
-            <div className="relative min-h-screen flex items-center justify-center backdrop-blur-lg bg-green-50/70">
+            <div className="relative  flex items-center justify-center backdrop-blur-lg bg-green-50/70">
                 <div className=" w-full md:w-auto p-10 rounded-3xl  border bg-[#FFFFFF] shadow-xl">
                     <h1 className="text-2xl font-semibold text-green-600 text-left mb-6">
                         Exciting Home Loan Offers from 90+ Banks in India
@@ -200,7 +197,7 @@ const Form = () => {
                                     placeholder=" XXXXXXXXX"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
-                                    className="border-0 focus:border-0 focus:outline-none focus:ring-0"
+                                    className="border-0 w-full focus:border-0 focus:outline-none focus:ring-0"
                                 />
                             </div>
                             <p className="text-xs text-gray-500 mb-4">
