@@ -42,7 +42,7 @@ const Main = () => {
             </span>
           </button>
         </div>
-        <div className="md:w-1/3">
+        <div className="md:w-1/3 md:fixed md:top-[270px] z-10 right-[140px]">
           <Form />
         </div>
 

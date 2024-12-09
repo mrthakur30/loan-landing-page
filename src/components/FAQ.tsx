@@ -1,36 +1,34 @@
-
 const FAQSection = () => {
   const faqs = [
     {
-      question: "Is my subscription account-based or device-based?",
+      question: "What types of loans do you offer?",
       answer:
-        "Your subscription is device-based, which means that we track your subscription based on the device you use to make the purchase. This means that if you pay for a subscription on one device and then login with the same account on a different device with a different Apple / Google ID, there will be no subscription.",
+        "We offer a variety of loans, including:\n- Home loans for purchasing or constructing your dream home.\n- Interior loans for designing and furnishing your space.\n- Loans against property for construction or renovation needs.",
     },
     {
-      question:
-        "Can I use any photo for the room interior or does it need to meet certain requirements?",
+      question: "What is the process for applying for a loan?",
       answer:
-        "We recommend that the photo should have good lighting and be taken from a straight angle, so that our AI can accurately detect the room's features and apply the selected style.",
+        "The process is simple and streamlined:\n1. Submit basic documents for verification.\n2. Get approved within a few days.\n3. Finalize the loan with our team of banking partners.\nWe’ll guide you every step of the way to make the process hassle-free.",
     },
     {
-      question: "What is the difference between the free and paid options?",
+      question: "What documents are required to apply for a loan?",
       answer:
-        "The free option allows users to make a limited number of images at a lower resolution, while the paid option allows for unlimited high-quality images.",
+        "You will need:\n- Identity proof (e.g., Aadhaar, PAN, or Passport)\n- Address proof (e.g., utility bill, rental agreement)\n- Income proof (e.g., salary slips, bank statements)\n- Property documents (for home or construction loans)",
     },
     {
-      question: "How long does it take for the AI to change the room's interior?",
+      question: "How competitive are your loan interest rates?",
       answer:
-        "The time it takes for the AI to change the room's interior varies depending on the size and complexity of the room, but generally takes a few minutes.",
+        "We work with over 90+ trusted banking partners to bring you the best interest rates in the market, ensuring you save more while building or designing your dream home.",
     },
     {
-      question: "Can I share the images I create using the app on social media?",
+      question: "Can I get a loan for interior design or renovation?",
       answer:
-        "Yes, you are free to share the images you create on social media, but we kindly ask that you credit the app if possible.",
+        "Yes, we offer tailored loans specifically for interior design and renovation projects, ensuring you can create a space that matches your vision without financial stress.",
     },
     {
-      question: "Are the styles available for selection limited to a certain number?",
+      question: "How long does it take to get loan approval?",
       answer:
-        "No, we offer a wide range of styles for users to select from, so there is plenty of variety to choose from.",
+        "Our fast-track approval process ensures you get pre-approved within a few days, depending on the completeness of your documents and eligibility. Final approval timelines may vary based on the loan type.",
     },
   ];
 
@@ -49,7 +47,7 @@ const FAQSection = () => {
             <div className="collapse-title text-lg font-medium text-green-800">
               {faq.question}
             </div>
-            <div className="collapse-content text-gray-700">
+            <div className="collapse-content text-gray-700 whitespace-pre-line">
               <p>{faq.answer}</p>
             </div>
           </div>
